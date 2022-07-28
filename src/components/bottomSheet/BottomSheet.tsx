@@ -41,6 +41,8 @@ import BottomSheetHandleContainer from '../bottomSheetHandleContainer';
 import BottomSheetBackgroundContainer from '../bottomSheetBackgroundContainer';
 import BottomSheetFooterContainer from '../bottomSheetFooterContainer/BottomSheetFooterContainer';
 import BottomSheetDraggableView from '../bottomSheetDraggableView';
+import ReText from '../bottomSheetDebugView/ReText';
+
 // import BottomSheetDebugView from '../bottomSheetDebugView';
 import {
   ANIMATION_STATE,
@@ -1632,6 +1634,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
                   handleIndicatorStyle={_providedHandleIndicatorStyle}
                 />
               </Animated.View>
+              <ReText style={{ position: 'absolute', opacity: 0, marginLeft: -10000, display: "none" }} text={""} value={animatedSheetState} />
               {/* <BottomSheetDebugView
                 values={{
                   // topInset,
